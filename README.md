@@ -24,7 +24,7 @@
 <br/>After receiving the data from a user that is logged in, there are a number of ways to store that login info. The following GitHub repository contains an example Express JS server that requests the data from http://cs361l.uw.r.appspot.com/login, then receives it at http://localhost:3000/callback. It uses localStorage to keep user data so a user stays logged in even after leaving the site, but there are many ways to do this. It also uses the http://cs361l.uw.r.appspot.com/logout endpoint to log a user out. This is a simple example, so other implementations may not be exactly the same:  <br/>https://github.com/kopatsis/CS361MicroserviceExample
 
 <br/>
-# UML Diagrams
+<h1>UML Diagrams</h1>
 
 **Login** 
 ```mermaid
