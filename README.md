@@ -1,5 +1,8 @@
 # CS 361 Login/Logout Microservice
 
+**Video Demonstration Link:** 
+https://youtu.be/wQ-J6LiseMM
+
 **Microservice Endpoints** 
 <br/>This microservice is hosted on Google App Engine, where the base URL is http://cs361l.uw.r.appspot.com. The two endpoint are as follows:
 > **/login:** the route to log a user in. Full URL http://cs361l.uw.r.appspot.com/login<br/>
