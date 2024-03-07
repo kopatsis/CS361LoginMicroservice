@@ -8,7 +8,14 @@ import (
 
 func Handler(logoutURL string) gin.HandlerFunc {
 	return func(ctx *gin.Context) {
-		redirectURL := logoutURL
-		ctx.Redirect(http.StatusFound, redirectURL)
+
+		returnURL := ctx.Query("url")
+
+		if returnURL == "" {
+			returnURL = logoutURL
+		}
+
+		// redirectURL := logoutURL
+		ctx.Redirect(http.StatusFound, returnURL)
 	}
 }

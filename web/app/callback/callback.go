@@ -70,7 +70,12 @@ func Handler(auth *authenticator.Authenticator, loginURL string) gin.HandlerFunc
 		encodedProfile := url.QueryEscape(string(profileJSON))
 		queryString := "data=" + encodedProfile
 
-		redirectURL := loginURL + "?" + queryString
+		returnURL := session.Get("url").(string)
+		if returnURL == "" {
+			returnURL = loginURL
+		}
+
+		redirectURL := returnURL + "?" + queryString
 		ctx.Redirect(http.StatusFound, redirectURL)
 
 	}

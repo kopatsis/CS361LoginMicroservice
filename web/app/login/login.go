@@ -23,6 +23,12 @@ func Handler(auth *authenticator.Authenticator) gin.HandlerFunc {
 		// Save the state inside the session.
 		session := sessions.Default(ctx)
 		session.Set("state", state)
+
+		query := ctx.Query("url")
+		// if query != "" {
+		session.Set("url", query)
+		// }
+
 		if err := session.Save(); err != nil {
 			ctx.String(http.StatusInternalServerError, err.Error())
 			return
